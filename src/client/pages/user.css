@@ -9,15 +9,36 @@
   table {
     border-collapse: collapse;
     width: 100%;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    overflow: auto;
   }
   
   th,
   td {
-    padding: 8px;
+    padding: 12px 8px;
     text-align: left;
     border-bottom: 1px solid #ddd;
   }
   
   th {
     background-color: #f2f2f2;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  td {
+    color: #666;
+  }
+  
+  /* Zebra Stripes */
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 600px) {
+    table {
+      font-size: 12px;
+    }
   }
