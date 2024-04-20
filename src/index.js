@@ -20,6 +20,10 @@ app.get('/', async (req, res) => {
 
 app.get('/users', async (req, res) => {
     // Write your logic here
+    const response = await fetch("https://dummyjson.com/users");
+    const data = await response.json()
+    res.send(data);
+    
 })
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))

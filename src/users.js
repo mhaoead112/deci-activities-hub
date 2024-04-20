@@ -6,6 +6,9 @@ class User {
         this.email = data.email;
         this.phone = data.phone;
     }
+    displayInfo() {
+        console.log(data);
+    }
 }
 let moh = new User({
     "id": 1,
@@ -15,3 +18,5 @@ let moh = new User({
 function displayInfo(user) {
     console.log(moh);
 }
+displayInfo()
+console.log(moh);
