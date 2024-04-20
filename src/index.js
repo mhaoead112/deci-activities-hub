@@ -17,7 +17,12 @@ app.use('/', express.static(path.join(__dirname, '../client')))
 app.get('/', async (req, res) => {
     res.sendFile(path.join(__dirname, './client/pages/user.html'));
 })
-
+app.get('/gg', async (req, res) => {
+    res.sendFile(path.join(__dirname, './users.js'));
+})
+app.get('/style', async (req, res) => {
+    res.sendFile(path.join(__dirname, './client/pages/user.css'));
+})
 app.get('/users', async (req, res) => {
     // Write your logic here
     const response = await fetch("https://dummyjson.com/users");
